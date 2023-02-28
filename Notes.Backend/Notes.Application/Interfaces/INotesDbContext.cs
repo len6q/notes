@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Primitives;
 using Notes.Domain;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Notes.Application.Interfaces
@@ -9,6 +9,6 @@ namespace Notes.Application.Interfaces
     {
         DbSet<Note> Notes { get; set; }
         
-        Task<int> SaveChangesAsync(CancellationChangeToken cancellationChangeToken);
+        Task<int> SaveChangesAsync(CancellationToken cancellationChangeToken);
     }
 }
