@@ -26,6 +26,7 @@ namespace Notes.Identity
                     logger.LogError(ex, "An error occurred while app initialization");
                 }
             }
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
